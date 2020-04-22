@@ -31,3 +31,45 @@ any(ints <0)
 any(ints > 0)
 all(ints > 0)
 
+Sys.Date()
+mean(c(2, 4, 5))
+mean(2, 3, 6)
+
+boring_function <- function(x) {
+  x
+}
+submit()
+boring_function('My first function!')
+boring_function
+
+library(swirl)
+swirl()
+
+
+telegram <- function(...,a = "START",b = "STOP"){
+  
+  y <- paste(a, ...,collapse = " " )
+  
+  paste(y,b)
+  
+}
+submit()
+telegram("good", "morning")
+
+mad_libs <- function(...){
+  # Do your argument unpacking here!
+  args = list(...)
+  names(args) = c("place", "adjective", "noun")
+  place = args[["place"]]
+  adjective = args[["adjective"]]
+  noun = args[["noun"]]
+  # Don't modify any code below this comment.
+  # Notice the variables you'll need to create in order for the code below to
+  # be functional!
+  paste("News from", place, "today where", adjective, "students took to the streets in protest of the new", noun, "being installed on campus.")
+}
+
+"%p%" <- function(left, right){ # Remember to add arguments!
+  paste(left," ",right) 
+}
+"good" %p% "morning"
